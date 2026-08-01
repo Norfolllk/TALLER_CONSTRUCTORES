@@ -4,51 +4,12 @@ public class TestPlato {
 
 	public static void main(String[] args) {
 
-		Plato platoA;
-		Plato platoB;
-		Plato platoC;
+		Plato platoA = new Plato("Ceviche Mixto", "Entrada", 8.50f, true);
+		Plato platoB = new Plato("Lomo Saltado", "Plato fuerte", 12.75f, true);
+		Plato platoC = new Plato("Cheesecake", "Postre", 5.25f, false);
 
-		platoA = new Plato();
-		platoB = new Plato();
-		platoC = new Plato();
+		System.out.println("PLATOS CREADOS CON CONSTRUCTOR\n");
 
-		System.out.println("PLATOS ANTES DE ASIGNAR VALORES\n");
-		System.out.println("Plato A");
-		System.out.println("Nombre: " + platoA.getNombre());
-		System.out.println("Tipo: " + platoA.getTipo());
-		System.out.println("Precio: " + platoA.getPrecio());
-		System.out.println("Disponible: " + platoA.isDisponible());
-		System.out.println();
-
-		System.out.println("Plato B");
-		System.out.println("Nombre: " + platoB.getNombre());
-		System.out.println("Tipo: " + platoB.getTipo());
-		System.out.println("Precio: " + platoB.getPrecio());
-		System.out.println("Disponible: " + platoB.isDisponible());
-		System.out.println();
-
-		System.out.println("Plato C");
-		System.out.println("Nombre: " + platoC.getNombre());
-		System.out.println("Tipo: " + platoC.getTipo());
-		System.out.println("Precio: " + platoC.getPrecio());
-		System.out.println("Disponible: " + platoC.isDisponible());
-
-		platoA.setNombre("Ceviche Mixto");
-		platoA.setTipo("Entrada");
-		platoA.setPrecio(8.50f);
-		platoA.setDisponible(true);
-
-		platoB.setNombre("Lomo Saltado");
-		platoB.setTipo("Plato fuerte");
-		platoB.setPrecio(12.75f);
-		platoB.setDisponible(true);
-
-		platoC.setNombre("Cheesecake");
-		platoC.setTipo("Postre");
-		platoC.setPrecio(5.25f);
-		platoC.setDisponible(false);
-
-		System.out.println("\nPLATOS CON VALORES SETEADOS\n");
 		System.out.println("Plato A");
 		System.out.println("Nombre: " + platoA.getNombre());
 		System.out.println("Tipo: " + platoA.getTipo());
@@ -67,6 +28,11 @@ public class TestPlato {
 		System.out.println("Nombre: " + platoC.getNombre());
 		System.out.println("Tipo: " + platoC.getTipo());
 		System.out.println("Precio: $" + platoC.getPrecio());
+		System.out.println("Disponible: " + platoC.isDisponible());
+
+		// Demostramos que el setter sigue funcionando
+		platoC.setDisponible(true);
+		System.out.println("\n--- Plato C después de setDisponible(true) ---");
 		System.out.println("Disponible: " + platoC.isDisponible());
 
 	}

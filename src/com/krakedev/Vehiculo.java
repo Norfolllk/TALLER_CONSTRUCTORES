@@ -2,8 +2,6 @@ package com.krakedev;
 
 public class Vehiculo {
 
-	// pilar de creación de atributo
-	// modificador de acceso - tipo de dato - valor
 	private String marca;
 	private String modelo;
 	private String anio;
@@ -12,18 +10,22 @@ public class Vehiculo {
 	private float iva;
 	private int numero;
 
-	// constructor sin parámetros
-	public Vehiculo() {
-
+	// Constructor completo: asigna directo todos los atributos
+	public Vehiculo(String marca, String modelo, String anio, String precio, boolean estado, float iva, int numero) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anio = anio;
+		this.precio = precio;
+		this.estado = estado;
+		this.iva = iva;
+		this.numero = numero;
 	}
 
-	// constructor con parámetros
 	public Vehiculo(String marca, String modelo) {
 		this.marca = marca;
 		this.modelo = modelo;
 	}
 
-	// regla de oro: el orden/tipo de los parámetros define el constructor
 	public Vehiculo(int numero, String modelo) {
 		this.numero = numero;
 		this.modelo = modelo;
@@ -34,7 +36,6 @@ public class Vehiculo {
 		this.modelo = modelo;
 	}
 
-	// getters y setters
 	public String getMarca() {
 		return marca;
 	}

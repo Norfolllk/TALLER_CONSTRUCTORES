@@ -4,39 +4,23 @@ public class TestRestaurante {
 
 	public static void main(String[] args) {
 
-		Restaurante rest1;
-		Restaurante rest2;
+		Restaurante rest1 = new Restaurante("VacoYVaca", "El Bosque", 4.5f);
+		Restaurante rest2 = new Restaurante("Menestras del Negro", "Av Real Audiencia", 3.8f);
 
-		rest1 = new Restaurante();
-		rest2 = new Restaurante();
-
-		System.out.println("Restaurantes antes de asignar valores");
-		System.out.println("Nombre: " + rest1.getNombre());
-		System.out.println("Dirección: " + rest1.getDireccion());
-		System.out.println("Calificación: " + rest1.getCalificacion() + "\n");
-
-		System.out.println("Restaurantes antes de asignar valores");
-		System.out.println("Nombre: " + rest2.getNombre());
-		System.out.println("Dirección: " + rest2.getDireccion());
-		System.out.println("Calificación: " + rest2.getCalificacion());
-
-		rest1.setNombre("VacoYVaca");
-		rest1.setDireccion("El Bosque");
-		rest1.setCalificacion(4.5f);
-
-		System.out.println("Restaurantes con valores seteados");
+		System.out.println("--- rest1 creado con constructor ---");
 		System.out.println("Nombre: " + rest1.getNombre());
 		System.out.println("Dirección: " + rest1.getDireccion());
 		System.out.println("Calificación: " + rest1.getCalificacion());
 
-		rest2.setNombre("Menestras del Negro");
-		rest2.setDireccion("Av Real Audiencia");
-		rest2.setCalificacion(3.8f);
-
-		System.out.println("Restaurantes con valores seteados");
+		System.out.println("\n--- rest2 creado con constructor ---");
 		System.out.println("Nombre: " + rest2.getNombre());
 		System.out.println("Dirección: " + rest2.getDireccion());
 		System.out.println("Calificación: " + rest2.getCalificacion());
+
+		// Demostramos que el setter sigue funcionando
+		rest1.setCalificacion(5.0f);
+		System.out.println("\n--- rest1 después de modificar calificación con setCalificacion(5.0) ---");
+		System.out.println("Calificación: " + rest1.getCalificacion());
 
 	}
 

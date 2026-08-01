@@ -4,16 +4,9 @@ public class TestRectangulo {
 
 	public static void main(String[] args) {
 
-		Rectangulo r1 = new Rectangulo();
+		Rectangulo r1 = new Rectangulo(4, 5);
 
-		System.out.println("--- Valores por defecto r1 ---");
-		System.out.println("Base: " + r1.getBase());
-		System.out.println("Altura: " + r1.getAltura());
-
-		r1.setBase(4);
-		r1.setAltura(5);
-
-		System.out.println("--- Valores después de setear r1 ---");
+		System.out.println("--- r1 creado con constructor(base, altura) ---");
 		System.out.println("Base: " + r1.getBase());
 		System.out.println("Altura: " + r1.getAltura());
 
@@ -25,16 +18,15 @@ public class TestRectangulo {
 		resultadoPerimetro = r1.calcularPerimetro();
 		System.out.println("Resultado perímetro r1: " + resultadoPerimetro);
 
-		Rectangulo r2 = new Rectangulo();
+		// Demostramos que el setter sigue funcionando para modificar después de creado
+		r1.setBase(10);
+		System.out.println("--- r1 después de modificar base con setBase(10) ---");
+		System.out.println("Base: " + r1.getBase());
+		System.out.println("Nueva área r1: " + r1.calcularArea());
 
-		System.out.println("--- Valores por defecto r2 ---");
-		System.out.println("Base: " + r2.getBase());
-		System.out.println("Altura: " + r2.getAltura());
+		Rectangulo r2 = new Rectangulo(2, 8);
 
-		r2.setBase(2);
-		r2.setAltura(8);
-
-		System.out.println("--- Valores después de setear r2 ---");
+		System.out.println("\n--- r2 creado con constructor(base, altura) ---");
 		System.out.println("Base: " + r2.getBase());
 		System.out.println("Altura: " + r2.getAltura());
 
